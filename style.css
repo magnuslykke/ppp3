@@ -1,0 +1,662 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-paragraph: "Montserrat", sans-serif;
+  --font-display: "Libre Caslon Display", serif;
+  --color-boxblack: #121212;
+  --color-backgroundwhite: #f9f9f9;
+  --color-paragraphwhite: #ffffff;
+  --color-punktpink: #ff6ab9;
+  --color-pinkknap: #f7c8ff;
+}
+
+body {
+  background-color: var(--color-backgroundwhite);
+  margin: 0;
+}
+
+.forside {
+  background: linear-gradient(135deg, #f7c8ff 0%, #fdb1e1 35%, #ff6ab9 65%);
+  margin: 0;
+}
+
+.forside_navn {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin: 0px 50px;
+}
+
+.year {
+  display: block;
+  margin: 0 10px 0px auto;
+  width: fit-content;
+  padding: 10px;
+  font-size: 50px;
+  font-family: var(--font-display);
+}
+
+.magnus_grid {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+}
+
+.magnus {
+  display: grid;
+  font-size: 150px;
+  font-weight: 400;
+  font-family: var(--font-display);
+}
+
+.lykke_grid {
+  grid-row: 2;
+  grid-column: 7;
+  margin: 0px 0px 0px -100px;
+}
+
+.lykke {
+  display: grid;
+  font-size: 75px;
+  font-weight: 400;
+  padding: 50px 0px 0px 0px;
+  font-family: var(--font-display);
+}
+
+.johansson_grid {
+  grid-row: 3;
+  grid-column: 7;
+}
+
+.johansson {
+  font-size: 120px;
+  font-weight: 400;
+  font-family: var(--font-display);
+}
+
+.multimediedesign_grid {
+  grid-row: 4;
+  grid-column: 7;
+}
+
+.multimediedesign {
+  font-size: 50px;
+  font-weight: 400;
+  display: block;
+  margin: 0 10px 10px auto;
+  width: fit-content;
+  padding: 10px;
+  font-family: var(--font-display);
+}
+
+.button_grid {
+  grid-row: 3;
+  grid-column: 2 / span 2;
+}
+
+.read_more {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 0px;
+  border: none;
+  box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  height: 96px;
+  font-size: 30px;
+  font-family: var(--font-paragraph);
+}
+
+.read_more:hover {
+  cursor: pointer;
+}
+
+#about_me {
+  background-color: white;
+}
+
+.main_div {
+  /* margin: 0px 50px 0px 50px; */
+}
+
+.overskrift_div_about {
+  /* display: grid;
+  grid-template-columns: 2fr 4fr 1fr; */
+  padding-top: 20px;
+}
+
+.overskrift {
+  font-size: 105px;
+  font-weight: 400;
+  margin: 0px 0px 0px 25px;
+  font-family: var(--font-display);
+}
+
+/* .border_about {
+            border-top: #feccff solid 10px;
+            margin: 45px 0px 0px 20px;
+            width: 650px;
+          } */
+
+.about_me_div {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 0px;
+  gap: 0px; /* Afstand mellem kolonnerne (kan ændres efter behov) */
+  align-items: center; /* Centrerer indhold lodret */
+}
+
+.text_about_me_div {
+  background-color: var(--color-boxblack);
+  border-radius: 0px;
+  margin-right: -50px;
+  margin-left: 50px;
+  box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 2; /* Sørg for, at teksten er foran billedet */
+}
+
+.text_about_me {
+  margin: 50px;
+  font-family: var(--font-paragraph);
+  color: var(--color-paragraphwhite);
+  font-size: 15px;
+}
+
+.image_about_me_div {
+  z-index: 1; /* Sørg for, at billedet er bag teksten */
+}
+
+/* .mig {
+  border-radius: 0px;
+  max-height: 400px;
+  margin: 50px;
+} */
+
+.mig {
+  max-width: 100%; /* Begræns billedets bredde til beholderens bredde */
+  height: 100%; /* Bevar billedets højde i proportion til dets bredde */
+  margin-left: -50px;
+  padding-bottom: 50px;
+}
+
+.divide_border {
+  width: 100%;
+  height: 15px;
+  background-color: #feccff;
+  margin: 0px 0px 30px 0px;
+}
+
+.projekter {
+  background-color: var(--color-boxblack);
+  /* margin-top: 20px; */
+  /* transform-origin: top center;
+  transform: rotate(-7deg);
+  overflow: hidden; */
+}
+
+.overskrift_projekter {
+  color: var(--color-paragraphwhite);
+  font-size: 105px;
+  font-weight: 400;
+  margin: 0px 0px 0px 25px;
+  font-family: var(--font-display);
+}
+
+/* .border_projekter {
+            border-top: #feccff solid 10px;
+            margin: 45px 0px 0px 20px;
+            width: 700px;
+          } */
+
+.om_projekter {
+  background-color: white;
+  border-radius: 50px;
+  margin: 50px 350px 50px 350px;
+  /* box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25); */
+}
+
+.text_om_projekter {
+  padding: 50px;
+}
+
+.h3_projekter {
+  font-size: 30px;
+  font-weight: normal;
+  font-style: italic;
+  /* margin: 0px 0px 0px 0px; */
+  padding: 20px 0px;
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  color: var(--color-paragraphwhite);
+  font-family: var(--font-paragraph);
+}
+
+a {
+  text-decoration: none;
+}
+
+.a_tag_projekter {
+  display: flex;
+  justify-content: center; /* Centrer indholdet vandret i <a>-tagget */
+  /* width: 100%; */
+  /* margin: 25px 50px 25px 50px; */
+  padding: 15px 30px 15px 10px;
+  /* background-color: #b1eff6; */
+  color: var(--color-paragraphwhite);
+  border: none;
+  /* box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25); */
+  height: 80px;
+  font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-paragraph);
+}
+
+.button-container {
+  /* display: flex; */
+  justify-content: start; /* Centrer indholdet vandret */
+  align-items: center; /* Centrer indholdet lodret */
+  flex-direction: column; /* Stak knapperne i en kolonne */
+  text-align: start; /* Centrer tekst indeni knapperne */
+}
+
+.knap_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: start; /* Centrer kolonner vandret */
+  align-items: center; /* Centrer rækker lodret */
+  gap: 50px;
+  padding: 50px 0px 50px 0px;
+  margin: 50px;
+}
+
+.a_tag_projekter:hover {
+  background-color: #feccff;
+}
+
+.img_container_change {
+  background-color: none;
+  height: 100%;
+
+  /* display: none; */
+}
+
+.projekt_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+  object-position: top;
+}
+
+/* Centrer teksten i knapperne */
+.knap_text {
+  flex-grow: 1; /* Gør teksten fleksibel, så den kan vokse */
+  /* text-align: center; */
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.knap_text_kategori {
+  font-size: 1rem;
+}
+
+/* Stil billeder separat */
+.img_knap {
+  max-width: 75px;
+  margin-left: 10px;
+  vertical-align: center;
+}
+
+.overskrift_div_goal {
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  padding-top: 20px;
+}
+
+.diamant_goal {
+  max-width: 75px;
+  margin: 0 10px 0px auto;
+  width: fit-content;
+  padding: 0px;
+}
+
+.goals {
+  background-color: var(--color-backgroundwhite);
+  padding: 0px 0px 50px 0px;
+}
+
+/* .border_goals {
+            border-top: #7ce4ef solid 10px;
+            margin: 45px 0px 0px 20px;
+            width: 700px;
+          } */
+
+.grid_2_goals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.om_goals {
+  background-color: var(--color-boxblack);
+  color: var(--color-paragraphwhite);
+  margin: 50px;
+  box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.text_om_goals {
+  padding: 50px;
+  font-family: var(--font-paragraph);
+}
+
+.faerdigheder_div {
+  background-color: var(--color-boxblack);
+  margin: 50px;
+  padding: 50px;
+  color: var(--color-paragraphwhite);
+  box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.faerdigheder_h3 {
+  font-size: 30px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-paragraph);
+}
+
+ul {
+  list-style-type: disc; /* Brug disc-ikon til listepunkterne */
+  padding-left: 20px;
+  /* Tilføj plads til venstre for listepunkterne */
+}
+
+li::marker {
+  color: var(--color-punktpink);
+  font-size: 24px;
+}
+
+li {
+  margin: 15px 0px 15px 0px;
+  font-family: var(--font-paragraph);
+}
+
+.diamant {
+  max-width: 30px;
+  padding: 25px 0px 0px 0px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  margin: 0px;
+  padding-bottom: 50px;
+  background-color: var(--color-boxblack);
+}
+
+.kontakt {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px;
+}
+
+.kontakt_p {
+  font-size: 20px;
+  color: var(--color-paragraphwhite);
+}
+
+.ikon_grid {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  gap: 30%;
+  margin-right: 300px;
+}
+
+/* .top_border {
+            border-top: #feccff solid 10px;
+            margin: 50px 20px 0px 20px;
+          } */
+
+.ikon_knap {
+  background-color: #feccff;
+  border-radius: 50%;
+  margin-top: 50px;
+  padding: 20px;
+  border: none;
+  box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 90px;
+  height: 90px;
+}
+
+.ikon_knap:hover {
+  cursor: pointer;
+}
+
+.ikon_img {
+  max-height: 50px;
+}
+
+@media (max-width: 900px) {
+  .main_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer indhold vandret */
+    justify-content: center; /* Centrer indhold lodret */
+    min-height: 100vh; /* Sørger for, at indholdet er mindst 100% af skærmens højde */
+  }
+  /* ------forside------ */
+  .year {
+    display: block;
+    margin: 0 10px 0px auto;
+    width: fit-content;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .forside_navn {
+    display: block;
+  }
+
+  .magnus {
+    font-size: 40px;
+    font-weight: 400;
+    padding: 50px 0px 0px 0px;
+  }
+
+  .lykke_grid {
+    margin: 0px;
+  }
+
+  .lykke {
+    display: grid;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .johansson {
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .multimediedesign {
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    margin: 0 10px 10px auto;
+    width: fit-content;
+    padding: 10px 0px 100px;
+  }
+
+  .read_more {
+    margin-top: 0px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 135px;
+    border: none;
+    box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    height: 80px;
+    font-size: 15px;
+    display: none;
+  }
+
+  /* --------about me------- */
+  .overskrift {
+    font-size: 3rem;
+  }
+  .about_me_div {
+    display: block;
+  }
+
+  .text_about_me_div {
+    margin: 15px 20px 50px 20px;
+    padding: 30px;
+    border-radius: 0px;
+  }
+
+  .text_about_me {
+    font-size: 13px;
+    margin: 0px;
+  }
+
+  .mig {
+    display: flex;
+    border-radius: 0px;
+    max-height: 280px;
+    margin: 0px 0px 50px 0px;
+    padding: 0px 0px 50px 0px;
+    max-width: 100%; /* Sørger for, at billedet ikke er bredere end sin container */
+    height: auto; /* Bevarer billedets proportioner */
+    margin: 0 auto; /* Centrer billedet vandret inden for sin container */
+  }
+  /* ----------Projekter--------- */
+  .overskrift_projekter {
+    font-size: 3rem;
+  }
+
+  .divide_border {
+    margin-top: 50px;
+  }
+
+  .knap_grid {
+    display: block;
+    margin: 0px;
+  }
+
+  .h3_projekter {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .a_tag_projekter {
+    display: flex;
+    justify-content: center; /* Centrer indholdet vandret i <a>-tagget */
+    width: 180px;
+    margin: 25px 50px 25px 50px;
+    padding: 20px;
+    background-color: none;
+    border-radius: 0px;
+    border: none;
+    box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 60px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-paragraphwhite);
+  }
+
+  /* -----------mål------- */
+
+  .grid_2_goals {
+    display: block;
+    margin: 20px;
+  }
+
+  .om_goals {
+    background-color: var(--color-boxblack);
+    border-radius: 0px;
+    margin: 15px 0px 50px 0px;
+    box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .text_om_goals {
+    font-size: 13px;
+  }
+
+  /* --------færdigheder---- */
+
+  .faerdigheder_div {
+    background-color: var(--color-boxblack);
+    margin: 0px;
+    padding: 50px;
+    border-radius: 0px;
+    box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  li {
+    font-size: 13px;
+  }
+
+  li::marker {
+    color: var(--color-punktpink);
+    font-size: 20px;
+  }
+
+  .kontakt_p {
+    font-size: 12px;
+  }
+  .diamant {
+    max-width: 25px;
+    padding: 25px 0px 0px 0px;
+  }
+
+  footer {
+    display: block;
+  }
+
+  .ikon_knap {
+    background-color: #feccff;
+    border-radius: 50%;
+    margin-top: 0px;
+    padding: 20px;
+    border: none;
+    box-shadow: 3px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 70px;
+    height: 70px;
+  }
+
+  .ikon_img {
+    max-height: 35px;
+  }
+
+  .ikon_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 0%;
+    padding: 10px;
+  }
+
+  .a_tag_footer {
+    margin: 10px;
+  }
+}
